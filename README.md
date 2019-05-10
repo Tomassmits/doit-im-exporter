@@ -1,7 +1,7 @@
 # doit-im-exporter
 Exporter for Doit.im
 
-Sick of the bad quality of the [Doit.im](https://doit.im) service? Then use this script to export.
+Sick of the bad quality of the [Doit.im](https://doit.im) service? Then use this script to move *your* data to safety.
 
 
 # How to use
