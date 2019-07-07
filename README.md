@@ -7,8 +7,7 @@ Use this tool to export your data as XML from [Doit.im](https://doit.im) because
 
 ## Create a filter that includes all your tasks, project, everything.
 Log in to [Doit.im](https://doit.im) using your browser. 
-Click on the "Search" icon on the top right
-
+Click on the "Search" icon on the top right and click on "advanced":
 ![Click Search Icon](docs/instruction1.png?raw=true "Click Search Icon")
 
 Now without setting any filter parameters, click "Save as a Filter":
