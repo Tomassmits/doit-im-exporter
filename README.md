@@ -1,5 +1,4 @@
-# doit-im-exporter
-Exporter for Doit.im
+# An XML exporter for your Doit.im data.
 
 Sick of the [Doit.im](https://doit.im) service? They refuse to provide an export for *your* data. You can use this script to move the data that you own to safety (a local XML file).
 
