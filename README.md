@@ -1,4 +1,4 @@
-# An XML exporter for your Doit.im data.
+# XML exporter for Doit.im
 
 Use this tool to export your data as XML from [Doit.im](https://doit.im) because they refuse to build an exporter for the data that *you* own!
 
