@@ -64,6 +64,14 @@ function createTagList( name, startLevel, obj )
 	return result;
 }
 
+/*
+
+$('body').text(JSON.stringify({'tasks': TASKS, 'projects': Doit.projects,
+           'contexts': Doit.contexts, 'tags': Doit.tags,
+           'goals': Doit.goals, 'contacts': Doit.contacts}));
+
+           */ 
+
 function getSettings()
 {
 	var result = "";
@@ -84,6 +92,7 @@ function writeXML()
 		output += createTagList("task", 1, TASKS);
 		output += createTagList("project", 1, Doit.projects);
 		output += createTagList("context", 1, Doit.contexts);
+		output += createTagList("goal", 1, Doit.goals);
 		output+="</gtd>\n";
 
 		//console.log(output);
@@ -92,31 +101,34 @@ function writeXML()
 
 
 writeXML();
-
-////////////// THIS COPIES DATA TO CLIPBOARD
 console.log(output);
 copy(output);
-/*
-////////////// THIS DOWNLOADS DATA AS A FILE
-function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
 
-  element.style.display = 'none';
-  document.body.appendChild(element);
+var saveData = (function () {
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
+    return function (data, fileName) {
+		var blob = new Blob([data], {type: "octet/stream"})
+		var url = window.URL.createObjectURL(blob);
+        a.href = url;
+        a.download = fileName;
+        a.click();
+        window.URL.revokeObjectURL(url);
+    };
+}());
 
-  element.click();
+Date.prototype.yyyymmdd = function() {
+  var mm = this.getMonth() + 1; // getMonth() is zero-based
+  var dd = this.getDate();
 
-  document.body.removeChild(element);
-}
+  return [this.getFullYear(),
+          (mm>9 ? '' : '0') + mm,
+          (dd>9 ? '' : '0') + dd
+         ].join('');
+};
 
-var exportFileName = "doitExportDATEHERE.xml";
-var now = new Date();
-var dateStr =
-	now.getFullYear() +
-	""+ (now.getMonth()+1+"").padStart(2, "0") +
-	""+ (now.getDate()+"").padStart(2, "0");
+var data = output
+var fileName = "doitExport"+new Date().yyyymmdd()+".xml";
 
-download(exportFileName.replace("DATEHERE", dateStr), output);
-*/
+saveData(data, fileName);
