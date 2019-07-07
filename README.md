@@ -19,7 +19,7 @@ Now give your new filter a name (e.g. "All Tasks").
 At the left bar, under `Filters`, you will find the filter you've just created. Open this filter. You might need to be patient because the list might be big.
 
 ## Export all these tasks
-Press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>j</kbd> (<kbd>command</kbd> + <kbd>option</kbd> + <kbd>j</kbd> for Mac) to get to the Developer/Javascript console. Paste the contents of the `doitExport_XML.js` file into the javascript console. If all works well, you now have all your data as now downloaded as an XML file and also in your clipboard.
+Press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>j</kbd> (<kbd>command</kbd> + <kbd>option</kbd> + <kbd>j</kbd> for Mac) to get to the Developer/Javascript console. Paste the contents of the `doitExport_XML.js` file into the javascript console. If all works well, your browser will have now downloaded an XML file with all your data.
 
 ## Repeat the export
 If you want to repeat the export, you can re-use a previously created filter.
