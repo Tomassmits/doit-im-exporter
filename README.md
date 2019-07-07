@@ -1,6 +1,6 @@
 # An XML exporter for your Doit.im data.
 
-Sick of the [Doit.im](https://doit.im) service because they refuse to provide an export feature for *your* data. You can use this script to move the data that you own to safety (a local XML file).
+Use this tool to export your data as XML from [Doit.im](https://doit.im) because they refuse to build an exporter for the data that *you* own!
 
 # How to use
 > These instructions are written for Chrome, but they probably work just as well in other browsers (just different keyboard shortcuts).
